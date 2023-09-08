@@ -1,7 +1,7 @@
 import React from 'react';
 import Button from '../Button/Button';
 
-export const AddTodoComponent = ({addTodos} : {addTodos: (text: string) => void}) => {
+export const AddTodo = ({addTodos} : {addTodos: (text: string) => void}) => {
   const [todo, setTodo] = React.useState<string>("");
   const submit = (e: React.MouseEvent<HTMLButtonElement, MouseEvent>) => {
     e.preventDefault();

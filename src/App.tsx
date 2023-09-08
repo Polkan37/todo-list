@@ -1,7 +1,7 @@
 import React from 'react';
 import {v4 as uuidv4} from 'uuid';
-import { TodosComponent } from './components/Todos/TodosComponent'
-import { AddTodoComponent } from './components/AddTodo/AddTodoComponent';
+import { TodoList } from './components/TodoList/TodoList'
+import { AddTodo } from './components/AddTodo/AddTodo';
 import type { ITodos } from './types/todos'
 
 import './App.css'
@@ -30,9 +30,10 @@ function App() {
 
   return (
     <div className="App">
-      <AddTodoComponent addTodos={addTodos} />
+      <h2>To Do List:</h2>
+      <AddTodo addTodos={addTodos} />
       <hr />
-      <TodosComponent 
+      <TodoList 
         todos={todos} 
         toggleTodos={toggleTodos}
         deleteTodos={deleteTodos} />
